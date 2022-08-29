@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body onload="dataChecking()"> 
+    <div >
+        <h1>Mes réponses types App</h1>
+        <div class="container">
+            <div class="left">
+                <form id="form">
+                    <label for="title-imput">Titre :</label>
+                    <br>
+                    <input id="title-input" name="title-imput">
+                    <br><br>
+                    <label for="item-input">Saisissez une nouvelle réponse :</label>
+                    <br>
+                    <textarea name="item-input" id="item-input" cols="50" rows="20"></textarea>
+                    <br><br>
+                    <div id="msg-error"></div>
+                    <button type="submit">Ajouter</button>
+                    <div id="json"></div>
+                </form>
+            </div>
+            <div class="right">
+                <h3>Liste de réponses types :</h3>
+                <div id="items" class="scroller"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="src/script.js"></script>
+</body>
+
+</html>

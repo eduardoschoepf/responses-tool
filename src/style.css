@@ -1,0 +1,81 @@
+body {
+    font-family: sans-serif;
+    margin: 0 50px;
+  }
+
+  h1 {
+    display:box; 
+    background: #274599; 
+    padding: 30px;color:#fff;
+  }
+
+  .container {
+    display: flex;
+    gap: 50px;
+  }
+
+  #json {
+    text-align: right;
+    margin-top: -20px;
+  }
+  
+  #items {
+    width: 60vw;
+  }
+  
+  i {
+    cursor: pointer;
+  }
+
+  #items div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #msg-error {
+    color: red;
+  }
+
+  .scroller {
+    height: 60vh;
+    overflow-y: scroll;
+    scrollbar-color: #083fa4db #e1e3e194;
+    scrollbar-width: thin;
+    padding: 10px;
+  }
+
+  .items-container {
+    margin-bottom: 15px;
+  }
+
+  .items-container>* {
+    margin: 0 10px;
+  }
+
+  .title {
+    flex: 2;
+  }
+
+  .item {
+    flex: 4;
+  }
+
+  .options {
+    display: flex;
+    gap: 25px;
+    flex: 1;
+    justify-content: end;
+  }
+
+  #title-input, #item-input {
+    width: 100%;
+  }
+
+  .left {
+    flex: 2;
+  }
+
+  .right {
+    flex: 4;
+  }
