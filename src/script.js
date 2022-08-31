@@ -12,6 +12,7 @@ form.addEventListener("submit", (e) => {
     formValidation();
 });
 
+//When arriving on the home page, we have to check if the data are in localStorage.
 function dataChecking() {
     var msg = "Aucune donnée n'est enregistrée. \nVous pouvez entrer les données de votre backup.json ici :";
     if (localStorage.getItem(localstorageName) === null) {
@@ -27,6 +28,7 @@ function dataChecking() {
     backup();
 };
 
+//The function assigns the stored data to the Map object.
 function assignItems() {
     var items = JSON.parse(localStorage.getItem(localstorageName));
     for (var i in items) {
@@ -34,6 +36,7 @@ function assignItems() {
     };
 };
 
+//The user has the possibility to save his data in json format.
 function backup() {
     var jsonse = localStorage.getItem(localstorageName);
     var blob = new Blob([jsonse], { type: "application/json" });
@@ -44,6 +47,7 @@ function backup() {
     document.getElementById('json').appendChild(a);
 };
 
+//We check if the input form is not empty.
 function formValidation() {
     if (titleImput.value === "" || itemInput.value === "") {
         msgError.innerHTML = "Veuillez compléter le formulaire.";
@@ -53,12 +57,14 @@ function formValidation() {
     }
 };
 
+//ToDO : comment
 function addData() {
     data.set(titleImput.value, itemInput.value);
     setLocalstorage();
     dataChecking();
 };
 
+//ToDO : comment
 function displayItems() {
     items.innerHTML = "";
     const reversed = new Map(Array.from(data).reverse());
@@ -77,6 +83,7 @@ function displayItems() {
     itemInput.value = titleImput.value = "";
 };
 
+//ToDO : comment
 function deleteItem(e) {
     data.delete(e.parentElement.parentElement.id);
     e.parentElement.parentElement.remove();
@@ -84,6 +91,7 @@ function deleteItem(e) {
     backup();
 };
 
+//ToDO : comment
 function editItem(e) {
     itemInput.value = e.parentElement.previousElementSibling.innerHTML;
     titleImput.value = e.parentElement.previousElementSibling.parentElement.id;
