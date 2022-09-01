@@ -57,14 +57,14 @@ function formValidation() {
     }
 };
 
-//ToDO : comment
+//Update the data of the Map object, as well as the localStorage.
 function addData() {
     data.set(titleImput.value, itemInput.value);
     setLocalstorage();
     dataChecking();
 };
 
-//ToDO : comment
+//We go through the data and display it on the screen.
 function displayItems() {
     items.innerHTML = "";
     const reversed = new Map(Array.from(data).reverse());
@@ -83,7 +83,7 @@ function displayItems() {
     itemInput.value = titleImput.value = "";
 };
 
-//ToDO : comment
+//Each item in the list has a delete icon. By clicking on this icon, you can delete the item.
 function deleteItem(e) {
     data.delete(e.parentElement.parentElement.id);
     e.parentElement.parentElement.remove();
@@ -91,7 +91,7 @@ function deleteItem(e) {
     backup();
 };
 
-//ToDO : comment
+//Each item in the list is associated with an edit icon. By clicking on this icon, you can modify the item.
 function editItem(e) {
     itemInput.value = e.parentElement.previousElementSibling.innerHTML;
     titleImput.value = e.parentElement.previousElementSibling.parentElement.id;
