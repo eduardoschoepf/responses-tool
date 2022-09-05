@@ -1,10 +1,13 @@
+//Elements of DOM
 let form = document.getElementById("form");
 let itemInput = document.getElementById("item-input");
 let titleImput = document.getElementById("title-input");
 let msgError = document.getElementById("msg-error");
 let items = document.getElementById("items");
-let localstorageName = "data";
 let a = document.createElement('a');
+
+//Attributes
+let localstorageName = "data";
 let data = new Map();
 
 form.addEventListener("submit", (e) => {
@@ -14,7 +17,8 @@ form.addEventListener("submit", (e) => {
 
 //When arriving on the home page, we have to check if the data are in localStorage.
 function dataChecking() {
-    var msg = "Aucune donnée n'est enregistrée. \nVous pouvez entrer les données de votre backup.json ici :";
+    var msg =   "Aucune donnée n'est enregistrée.\n\n" + 
+                "Vous pouvez entrer les données de votre backup.json ici :\n\n";
     if (localStorage.getItem(localstorageName) === null) {
         var checking = prompt(msg);
         if (checking !== "") {
