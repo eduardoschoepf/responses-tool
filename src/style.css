@@ -1,81 +1,105 @@
 body {
     font-family: sans-serif;
     margin: 0 50px;
-  }
+}
 
-  h1 {
-    display:box; 
-    background: #274599; 
-    padding: 30px;color:#fff;
-  }
-
-  .container {
+.container {
     display: flex;
     gap: 50px;
-  }
+}
 
-  #json {
+#json {
     text-align: right;
     margin-top: -20px;
-  }
+}
   
-  #items {
+#items {
     width: 60vw;
-  }
+}
   
-  i {
+i {
     cursor: pointer;
-  }
+}
 
-  #items div {
+#items div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
+}
   
-  #msg-error {
+#msg-error {
     color: red;
-  }
+}
 
-  .scroller {
+.scroller {
     height: 60vh;
     overflow-y: scroll;
     scrollbar-color: #083fa4db #e1e3e194;
     scrollbar-width: thin;
     padding: 10px;
-  }
+}
 
-  .items-container {
+.items-container {
     margin-bottom: 15px;
-  }
+}
 
-  .items-container>* {
+.items-container>* {
     margin: 0 10px;
-  }
+}
 
-  .title {
+.title {
     flex: 2;
-  }
+}
 
-  .item {
+.item {
     flex: 4;
-  }
+}
 
-  .options {
+.options {
     display: flex;
     gap: 25px;
     flex: 1;
     justify-content: end;
-  }
+}
 
-  #title-input, #item-input {
+#title-input, #item-input {
     width: 100%;
-  }
+}
 
-  .left {
+.left {
     flex: 2;
-  }
+}
 
-  .right {
+.right {
     flex: 4;
-  }
+}
+
+.type-writer {
+    display: box; 
+    background: #274599; 
+    padding: 30px;
+    color:#fff;
+}
+
+.type-writer h1 {
+    font-weight: lighter;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+   from { width: 0 }
+   to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+   from, to { border-color: transparent }
+   50% { border-color: orange; }
+}
