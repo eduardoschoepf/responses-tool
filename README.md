@@ -12,7 +12,7 @@ Welcome to the Mes Réponses Types App – an application for managing and stori
 
 ## Getting Started
 
-Open the page in your web browser: https://eduardoschoepf.github.io/ResponsesTool/
+Open the page in your web browser: https://eduardoschoepf.github.io/responses-tool/
 
 ### Usage:
 
